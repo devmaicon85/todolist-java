@@ -1,0 +1,41 @@
+
+
+POST http://localhost:8080/user/
+Content-Type: application/json
+
+{
+    "name": "Maicon",
+    "username": "devmaicon",
+    "password": "123456"
+}
+
+
+### TASKS
+POST http://localhost:8080/tasks/
+Content-Type: application/json
+Authorization: Basic devmaicon:123456
+
+{
+    "title": "NODEJS",
+    "priority": "ALTA",
+    "description": "Tarefa para gravar aulas",
+    "startAt": "2023-10-15T12:50:00",
+    "endAt": "2023-10-18T12:18:00"
+}
+
+
+###UPDATE
+PUT http://localhost:8080/tasks/8939676b-c0db-4724-9c45-46189837b8d9
+Content-Type: application/json
+Authorization: Basic devmaicon:123456
+
+{
+    "title": "Aulas de Node JS",
+    "description": "novas aulas de node"
+}
+
+
+### GET TASKS
+GET http://localhost:8080/tasks/
+Content-Type: application/json
+Authorization: Basic devmaicon:123456
